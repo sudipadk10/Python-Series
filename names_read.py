@@ -3,7 +3,7 @@ with open("names.txt" , "r") as file:    #we can also do file = open("names.txt"
     lines = file.readlines()
 
 for line in lines:                  
-    print("Hello " ,line.rstrip)    # .rstrip is equal to end =""
+    print("Hello " ,line.rstrip())    # .rstrip is equal to end =""
 
 #alternative:
 
