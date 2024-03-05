@@ -1,12 +1,8 @@
 #python3 hello.py -n 5
-import sys
+import argparse
+parser = argparse.ArgumentParser(description= "Hello kitty")
+parser.add_argument("-n" , default= 1 , help= "No of times to Hello" , type= int)
+args = parser.parse_args()
 
-if len(sys.argv) == 1:
+for _ in range(args.n):
     print("Hello")
-elif len(sys.argv) == 3 and sys.argv[1]=="-n":
-    n = int(sys.argv[2])
-    for _ in range(n):
-        print("Hello")
-
-else:
-    print("Invalid.")
