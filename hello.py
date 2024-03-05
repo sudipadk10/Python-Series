@@ -1,10 +1,12 @@
-def main():
-    name = input("What's your name ?")
-    print(hello(name))
+#python3 hello.py -n 5
+import sys
 
-def hello(x = "World"):
-    return f"Hello , {x}"
+if len(sys.argv) == 1:
+    print("Hello")
+elif len(sys.argv) == 3 and sys.argv[1]=="-n":
+    n = int(sys.argv[2])
+    for _ in range(n):
+        print("Hello")
 
-if __name__ == "__main__":
-    main()
-    
+else:
+    print("Invalid.")
